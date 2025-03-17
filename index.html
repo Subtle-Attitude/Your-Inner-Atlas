@@ -1,0 +1,90 @@
+<!DOCTYPE html>
+<html lang="en" >
+<head>
+  <meta charset="UTF-8">
+  <title>Your Inner Atlas</title>
+  <link rel="stylesheet" href="./style.css">
+
+</head>
+<body>
+<!-- partial:index.partial.html -->
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Card Deck Application</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+    <audio id="shuffle-sound" src="https://dl.dropboxusercontent.com/scl/fi/5rfd3ye8wcv9ejtmo76ps/playing-cards-being-delt-29099.mp3?rlkey=38i8t50m7bl6gw6vi8k693bnp&st=ec فلxd6"></audio>
+    <audio id="flip-sound" src="https://dl.dropboxusercontent.com/scl/fi/e8vlcz7sshps0jv2374er/flipcard-91468.mp3?rlkey=76gqnl4ptl93n9swuz5zpj9fh&st=m66sxfoj"></audio>
+
+    <div class="tabs">
+        <button class="tab-btn active" data-tab="deck"></button>
+        <button class="tab-btn" data-tab="calendar"></button>
+    </div>
+
+    <div id="deck-tab" class="tab-content active">
+        <div class="deck-container">
+            <div class="deck-area" id="reflection-deck">
+                <div class="button-container">
+                    <button class="control-btn shuffle-btn" data-deck="reflection"></button>
+                    <button class="control-btn flip-btn" data-deck="reflection" style="display: none;"></button>
+                    <button class="control-btn reset-btn" data-deck="reflection" style="display: none;"></button>
+                </div>
+                <div class="card-container" data-deck="reflection">
+                    <div class="card" id="reflection-card">
+                        <div class="front"></div>
+                        <div class="back"></div>
+                    </div>
+                </div>
+            </div>
+
+            <div class="deck-area" id="catalyst-deck">
+                <div class="card-container" data-deck="catalyst">
+                    <div class="card" id="catalyst-card">
+                        <div class="front"></div>
+                        <div class="back"></div>
+                    </div>
+                </div>
+                <div class="button-container">
+                    <button class="control-btn shuffle-btn" data-deck="catalyst"></button>
+                    <button class="control-btn flip-btn" data-deck="catalyst" style="display: none;"></button>
+                    <button class="control-btn reset-btn" data-deck="catalyst" style="display: none;"></button>
+                </div>
+            </div>
+        </div>
+        <div class="journal-section">
+            <div class="journal-title"></div>
+            <div class="journal-input-container">
+                <textarea id="journal-insights" placeholder="Enter your insights here..." rows="5" cols="60" disabled></textarea>
+            </div>
+            <div class="journal-buttons">
+                <button id="speech-btn"></button>
+                <button id="log-btn" disabled></button>
+            </div>
+            <div id="journal-status"></div>
+        </div>
+    </div>
+
+    <div id="calendar-tab" class="tab-content">
+        <div class="past-entries-title"></div>
+        <div class="calendar-controls">
+            <select id="year-filter"><option value="">All Years</option></select>
+            <select id="month-filter"><option value="">All Months</option></select>
+            <select id="date-filter"><option value="">All Dates</option></select>
+            <input type="text" id="search-input" placeholder="Search by keyword...">
+            <button id="search-btn"></button>
+        </div>
+        <div id="calendar-log"></div>
+    </div>
+
+    <script src="script.js"></script>
+</body>
+</html>
+<!-- partial -->
+  <script  src="./script.js"></script>
+
+</body>
+</html>
